@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DropTargetActor
+comment1.params=x\ y\ s
+comment1.target=DropTargetActor(float,\ float,\ com.badlogic.gdx.scenes.scene2d.Stage)
+comment2.params=t
+comment2.target=void\ setTargetable(boolean)
+comment2.text=\r\n\ \ Set\ whether\ this\ actor\ can\ be\ targeted\ by\ a\ DragAndDrop\ actor.\r\n\ \ @param\ t\ can\ this\ actor\ be\ targeted\r\n
+comment3.params=
+comment3.target=boolean\ isTargetable()
+comment3.text=\r\n\ \ Check\ if\ this\ actor\ can\ be\ targeted\ by\ a\ DragAndDrop\ actor.\r\n\ \ @return\ can\ this\ actor\ be\ targeted\ \r\n
+numComments=4

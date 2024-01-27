@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.target=Null
+comment0.text=\ An\ element\ with\ this\ annotation\ claims\ that\ the\ element\ may\ have\ a\ {@code\ null}\ value.\ Apart\ from\ documentation\ purposes\ this\r\n\ annotation\ is\ intended\ to\ be\ used\ by\ static\ analysis\ tools\ to\ validate\ against\ probable\ runtime\ errors\ or\ contract\ violations.\r\n@author\ maltaisn
+numComments=1
