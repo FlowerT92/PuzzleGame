@@ -14,6 +14,8 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
+import java.util.ArrayList;
+import java.util.*;
 
 public class LevelScreen extends BaseScreen
 {
@@ -51,6 +53,7 @@ public class LevelScreen extends BaseScreen
         Table scrollTable = new Table();
         
         TextureRegion[][] temp = TextureRegion.split(texture,pieceWidth,pieceHeight);
+        ArrayList<PuzzlePieceImage> listOfUIPieces = new ArrayList<>();
         for(int r = 0; r < numberRows; r++)
         {
             for( int c = 0; c < numberCols; c++)
@@ -177,13 +180,18 @@ public class LevelScreen extends BaseScreen
                //scaleFactorY=(100.0f/pieceHeight);
                ppi.setDragAndDropActor(pp);
                ppi.setSize(100,100);
-               scrollTable.add(ppi).pad(10);
                ppi.setTable(scrollTable);
-               
+               listOfUIPieces.add(ppi);
                
             }
         }
-               
+        
+        Collections.shuffle(listOfUIPieces);
+        for (PuzzlePieceImage element: listOfUIPieces)
+        {
+             scrollTable.add(element).pad(10);
+        }
+        
         ScrollPane2 scroller = new ScrollPane2(scrollTable);
         
         uiTable.add(scroller).expandX().expandY().bottom().pad(15); 
